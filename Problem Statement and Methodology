@@ -38,6 +38,14 @@ Clustering-based outlier detectionm methods and Classification-based outlier det
 
 4) Modelling:
 
+Built probability estimation models using SVM, Random forests, Decision trees, K-NN models.
+I have ranked all the test instances according to decreasing score. Now witha ranking classifier plus a threshold produces
+a single confusion matrix. Whenever I change the threshold the confusion matrix will also change as the number of False Positives change
+
+Also, at each point of the change in threshold, the expected value also changes i.e. the profit. The profit is 
+
+
+
 
 
 
