@@ -9,7 +9,7 @@ to the offers we make. The expected profit is calculated using a confusion matri
 E() = [p(o1)*v(o1)]+ [p(o2)*v(o2)]+ [p(o3)*v(o3)]+.....+[p(oN)*v(oN)], where N is the total number of outcome variations possible 
 
 Methodology:
-Followed the 6 stage framework of CRISP Cross Industry Standard PRocess of DAta mining
+Followed the 6 stage framework of CRISP Cross Industry Standard Process of Data mining
 
 1) Business Undersdatning:
 The NGO has about 50,000 USD $ set aside for its marketing efforts 
@@ -23,12 +23,20 @@ The data was provided by the NGO itself according to the forms the clientelle ha
 There were features of the clientelle and also global economic factors included. About 50 features were present in the data.
 Both numberic type and categorical type variables were as an input
 
-3) DAta preparation:
+3) Data preparation:
 
 Normalization: min max normalization was used
+
 Outlier treatment: 
+Used the concepts of Global outliers to identify them and treat them. Statistical outlier detection methods or model based methods.
+Mahalanobis distance, X2 statistic from the parametric methods and Histograms from the non parametric methods were used.
 
+Also, Proximity based outlier detection methods were also used: Distance based outlier detection and density based outlier 
+detection methods are used
 
+Clustering-based outlier detectionm methods and Classification-based outlier detection methods (One-class) were used
+
+4) Modelling:
 
 
 
