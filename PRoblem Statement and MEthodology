@@ -1,2 +1,35 @@
 PRoblem Statement:
 
+The NGO wants to start some marketing efforts to increase the donations received from its client base. The NGO does not know which
+customers would be willing to pay. Also the NGO does not know how much the client might pay?
+
+Final State: The NGO has a machine learning model which indicates the probabilities of the client responding or not responding back 
+to the offers we make. The expected profit is calculated using a confusion matrix and Expected value equation
+
+E() = [p(o1)*v(o1)]+ [p(o2)*v(o2)]+ [p(o3)*v(o3)]+.....+[p(oN)*v(oN)], where N is the total number of outcome variations possible 
+
+Methodology:
+Followed the 6 stage framework of CRISP Cross Industry Standard PRocess of DAta mining
+
+1) Business Undersdatning:
+The NGO has about 50,000 USD $ set aside for its marketing efforts 
+The profit margin from each of the customers is high - Around 2000$
+The cost for making the offer and market is also high - Around 100$. Accordingly they have the capabilties to target 50000/100 = 500 customers 
+in their list of clientelle.
+
+2) Data understanding:
+
+The data was provided by the NGO itself according to the forms the clientelle had filled up from the past few years.
+There were features of the clientelle and also global economic factors included. About 50 features were present in the data.
+Both numberic type and categorical type variables were as an input
+
+3) DAta preparation:
+
+Normalization: min max normalization was used
+Outlier treatment: 
+
+
+
+
+
+
