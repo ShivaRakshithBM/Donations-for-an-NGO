@@ -38,10 +38,10 @@ Clustering-based outlier detectionm methods and Classification-based outlier det
 
 4) Modelling:
 
-Built probability estimation models using SVM, Random forests, Decision trees, K-NN models. Did not use discrete classifiers
-as that outputs only a class label as opposed to a ranking / probability estimation
-I have ranked all the test instances according to decreasing score. Now witha ranking classifier plus a threshold produces
-a single confusion matrix. Whenever I change the threshold the confusion matrix will also change as the number of False Positives change
+Built probability estimation models using Logistic Regression, Naive - Bayes Regression, SVM, Random forests, Decision trees, K-NN 
+models. Did not use discrete classifiers as that outputs only a class label as opposed to a ranking / probability estimation
+I have ranked all the test instances according to decreasing score. Now with a ranking classifier plus a threshold produces
+a single confusion matrix. Whenever I change the threshold the confusion matrix will also change as the number of False Positives change.
 
 Also, at each point of the change in threshold, the expected value also changes i.e. the profit. The profit in $ amount is plotted
 against the percentage of test instances targeted. Here the observation is the profit curve starts at the same point i.e. at 0$ for all 
@@ -50,20 +50,20 @@ classifiers and ends at the same point  i.e at -2 Million USD for all classifier
 According to our business understanding, we can target 500 clientelle. I have 2000 clientelle in my validation data set. So 500/2000
 will give a 25% of customers should be targeted. At 25% of the test instances, classifier SVM gives the highest profit.
 So use the SVM classifier to rank all the unknown data points and take the top 25% of the ranked clientelle to be targetted.
-The random classifier which joins the start point 0$ and the negative point -2,000,000 performs the worst, since it has an even chance of
-selecting a non responding client or from a responding client.
+The random classifier which joins the start point 0$ and the negative point -2,000,000 performs the worst, since it has an even chance
+of selecting a non responding client or from a responding client.
 
 5) Evaluation:
 
 The difference between the previous years total amount of donation and the year in which the marketing efforts were done is amounting
-to around 1.2 Million Dollars
+to around 1.4 Million Dollars
 
 In our case the class priors, the proportion of positive and negative instances in the validation population is stable or certain.
 Also plotted the ROC graph - the plot of True positive rate vs False positive rate - for all the classsifiers. 
 This helped me to understand the relative trade offs that the classifiers are making between the benefits ( True positives and costs 
 (False positives)
 
-Also calculated the Are Under the ROC Curve (AUC). This is obtained as a single number - Area under the classifers curve(Ranking 
+Also calculated the Area Under the ROC Curve (AUC). This is obtained as a single number - Area under the classifers curve(Ranking 
 + Confusion matrix) as a fraction of the unit square. Ranged from 0 to 1. This is best when the operating conditions are not known, but
 here we know
 
