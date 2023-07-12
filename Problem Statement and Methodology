@@ -28,8 +28,8 @@ Both numberic type and categorical type variables were as an input
 Normalization: min max normalization was used
 
 Outlier treatment: 
-Used the concepts of Global outliers to identify them and treat them. Statistical outlier detection methods or model based methods.
-Mahalanobis distance, X2 statistic from the parametric methods and Histograms from the non parametric methods were used.
+Used the concepts of Graphical based methods to identify outliers and treat them.
+Used IQR of a box plot, < Quartile 1- (1.5*IQR), > Quartile 3 + (1.5*IQR) and Histograms
 
 Also, Proximity based outlier detection methods were also used: Distance based outlier detection and density based outlier 
 detection methods are used
