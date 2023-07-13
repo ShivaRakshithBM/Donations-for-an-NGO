@@ -6,10 +6,10 @@ customers would be willing to pay. Also the NGO does not know how much the clien
 Final State: The NGO has a machine learning model which indicates the probabilities of the client responding or not responding back 
 to the offers we make. The expected profit is calculated using a confusion matrix and Expected value equation
 
-E() = [p(o1)*v(o1)]+ [p(o2)*v(o2)]+ [p(o3)*v(o3)]+.....+[p(oN)*v(oN)], where N is the total number of outcome variations possible 
+Expected Value() = [p(o1)*v(o1)]+ [p(o2)*v(o2)]+ [p(o3)*v(o3)]+.....+[p(oN)*v(oN)], where N is the total number of outcome variations possible 
 
 Methodology:
-Followed the 6 stage framework of CRISP Cross Industry Standard Process of Data mining
+Followed the Expected value maximization framework integrated with CRISP Cross Industry Standard Process of Data mining
 
 1) Business Undersdatning:
 The NGO has about 50,000 USD $ set aside for its marketing efforts 
