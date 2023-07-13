@@ -9,12 +9,12 @@ to the offers we make. The expected profit is calculated using a confusion matri
 Expected Value() = [p(o1)*v(o1)]+ [p(o2)*v(o2)]+ [p(o3)*v(o3)]+.....+[p(oN)*v(oN)], where N is the total number of outcome variations possible 
 
 Methodology:
-Followed the Expected value maximization framework integrated with CRISP Cross Industry Standard Process of Data mining
+Followed the Expected value maximization framework:
 
 1) Business Undersdatning:
-The NGO has about 50,000 USD $ set aside for its marketing efforts 
-The profit margin from each of the customers is high - Around 2000$
-The cost for making the offer and market is also high - Around 100$. Accordingly they have the capabilties to target 50000/100 = 500 customers 
+The NGO has about 50,000 USD $ set aside for its marketing efforts. 
+The profit margin from each of the customers is high - Around 2000$.
+The cost for making the offer and market is also high - Around 100$. Accordingly they have the capabilties to target 50,000/100 = 500 customers 
 in their list of clientelle.
 
 2) Data understanding:
@@ -34,8 +34,6 @@ Used IQR of a box plot, < Quartile 1- (1.5*IQR), > Quartile 3 + (1.5*IQR) and Hi
 Also, Proximity based outlier detection methods were also used: Distance based outlier detection and density based outlier 
 detection methods are used
 
-Clustering-based outlier detectionm methods and Classification-based outlier detection methods (One-class) were used
-
 4) Modelling:
 
 Built probability estimation models using Logistic Regression, Naive - Bayes Regression, SVM, Random forests, Decision trees, K-NN 
@@ -43,8 +41,8 @@ models. Did not use discrete classifiers as that outputs only a class label as o
 I have ranked all the test instances according to decreasing score. Now with a ranking classifier plus a threshold produces
 a single confusion matrix. Whenever I change the threshold the confusion matrix will also change as the number of False Positives change.
 
-Also, at each point of the change in threshold, the expected value also changes i.e. the profit. The profit in $ amount is plotted
-against the percentage of test instances targeted. Here the observation is the profit curve starts at the same point i.e. at 0$ for all 
+Also, at each point of the change in threshold, the Expected Value also changes i.e. Profit. The Profit in $ (Y axis) is plotted
+against % of Test instances targeted (Y axis). Here the observation is the profit curve starts at the same point i.e. at 0$ for all 
 classifiers and ends at the same point  i.e at -2 Million USD for all classifiers since all the customers/clientelle is being targeted
 
 According to our business understanding, we can target 500 clientelle. I have 2000 clientelle in my validation data set. So 500/2000
@@ -60,16 +58,15 @@ to around 1.4 Million Dollars
 
 In our case the class priors, the proportion of positive and negative instances in the validation population is stable or certain.
 Also plotted the ROC graph - the plot of True positive rate vs False positive rate - for all the classsifiers. 
-This helped me to understand the relative trade offs that the classifiers are making between the benefits ( True positives and costs 
-(False positives)
+This helped me to understand the relative trade offs that the classifiers are making between the Benefits (True positives) and Costs (False positives)
 
-Also calculated the Area Under the ROC Curve (AUC). This is obtained as a single number - Area under the classifers curve(Ranking 
+Also calculated the Area Under the ROC Curve (AUC). This is obtained as a single number - Area under the classifers curve (Ranking 
 + Confusion matrix) as a fraction of the unit square. Ranged from 0 to 1. This is best when the operating conditions are not known, but
 here we know
 
-Also plotted the cumulative responsive curve - plot true positive rate (y axis) vs the % of the population that is targeted (x-axis).
-Also plotted the lift curve, the points on the cumulative response curve divided by the diagonal line (y=x) which indicates the random
-classifier
+Also plotted the Cumulative Responsive Curve - plot True Positive rate (y axis) vs the % of the Population that is targeted (x axis).
+Also plotted the lift curve, the points on the cumulative response curve divided by the diagonal line (y = x) which indicates the random
+classifier performance
 
 6) Deployment:
 The analysis was done on a manual basis in Jupyter notebook
